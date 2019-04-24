@@ -41,7 +41,7 @@
 	<if test="hiddingEmptyStock"> AND t.tran_status_code IS NULL </if>
 		<if test="!(searchKeyword == null or searchKeyword == '')">
 			<choose>
-				<when test="searchCondition  == '0'.toString()">
+				<when test="searchCondition  == 0">
 					<if test="splitKeyword == null">
 						AND p.prod_no = #{searchKeyword:INTEGER}
 					</if>
@@ -49,10 +49,10 @@
 						AND p.prod_no BETWEEN #{splitKeyword[0]:INTEGER} AND #{splitKeyword[1]:INTEGER}
 					</if>
 				</when>
-				<when test="searchCondition == '1'.toString()">
+				<when test="searchCondition == 1">
 					AND p.prod_name like #{searchKeyword}
 				</when>
-				<when test="searchCondition  == '2'.toString()">
+				<when test="searchCondition  == 2">
 					<if test="splitKeyword == null">
 						AND p.price = #{searchKeyword:INTEGER}
 					</if>

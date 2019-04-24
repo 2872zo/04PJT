@@ -31,7 +31,7 @@ public class ProductTestApp {
 	@Qualifier("productDaoImpl")
 	private ProductDao productDao;
 	
-	@Test
+	//@Test
 	public void testInsertProduct() throws Exception {
 		System.out.println("=========================================================");
 		Product product = new Product();

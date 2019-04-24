@@ -29,7 +29,7 @@ CREATE TABLE product (
 	prod_no 						NUMBER 				NOT NULL,
 	prod_name 				VARCHAR2(100) 	NOT NULL,
 	prod_detail 				VARCHAR2(200),
-	manufacture_day		VARCHAR2(8),
+	manufacture_day			VARCHAR2(8),
 	price 							NUMBER(10),
 	image_file 					VARCHAR2(100),
 	reg_date 					DATE,
@@ -43,10 +43,10 @@ CREATE TABLE transaction (
 	payment_option		CHAR(3),
 	receiver_name 		VARCHAR2(20),
 	receiver_phone		VARCHAR2(14),
-	demailaddr 			VARCHAR2(100),
+	dlvy_addr 			VARCHAR2(100),
 	dlvy_request 			VARCHAR2(100),
 	tran_status_code	CHAR(3),
-	order_data 			DATE,
+	order_date 			DATE,
 	dlvy_date 				DATE,
 	PRIMARY KEY(tran_no)
 );

@@ -40,12 +40,12 @@ public class PurchaseTestApp {
 		Purchase purchase = new Purchase();
 		purchase.setBuyer(user);
 		purchase.setPurchaseProd(product);
-//		purchase.setPaymentOption("0");
-//		purchase.setReceiverName("user01");
-//		purchase.setReceiverPhone("00011112222");
-//		purchase.setDlvyAddr("집");
-//		purchase.setDlvyRequest("당일");
-//		purchase.setDlvyDate("20190423");
+		purchase.setPaymentOption("0");
+		purchase.setReceiverName("user01");
+		purchase.setReceiverPhone("00011112222");
+		purchase.setDlvyAddr("집");
+		purchase.setDlvyRequest("당일");
+		purchase.setDlvyDate("20190423");
 		
 		System.out.println("insert 할 purchase : " + purchase);		
 		
@@ -67,7 +67,7 @@ public class PurchaseTestApp {
 	//@Test
 	public void testGetPurchase() throws Exception{
 		System.out.println("=========================================================");
-		int tranNo = 10020;
+		int tranNo = 10025;
 		
 		System.out.println("getUser 결과 : " + purchaseService.getPurchase(tranNo));
 				
@@ -84,14 +84,14 @@ public class PurchaseTestApp {
 		purchase.setDlvyAddr("update");
 		purchase.setDlvyRequest("내일");
 		purchase.setDlvyDate("20190424");
-		purchase.setTranNo(10020);
+		purchase.setTranNo(10025);
 
 		System.out.println("updateUser 결과 : " + purchaseService.updatePurchase(purchase));
 				
 		System.out.println("=========================================================\n");
 	}
 	
-	@Test
+	//@Test
 	public void testUpdateTranCode() throws Exception{
 		System.out.println("=========================================================");
 		Product purchaseProd = new Product();
@@ -99,7 +99,7 @@ public class PurchaseTestApp {
 		
 		Purchase purchase = new Purchase();
 		//tranNo나 prodNo 둘중 하나를 선택해서 tranCode Update
-		//purchase.setTranNo(10020);
+		//purchase.setTranNo(10025);
 		purchase.setPurchaseProd(purchaseProd);
 		purchase.setTranCode("3");
 
@@ -108,14 +108,12 @@ public class PurchaseTestApp {
 		System.out.println("=========================================================\n");
 	}
 	
-	//@Test
+	@Test
 	public void testGetPurchaseList() throws Exception{
 		System.out.println("=========================================================");
 		Search search = new Search();
 		search.setCurrentPage(1);
 		search.setPageSize(3);
-		search.setSearchCondition("1");
-		search.setSearchKeyword("%자%");
 		search.setUserId("user01");
 		
 		
