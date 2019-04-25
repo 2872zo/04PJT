@@ -1,17 +1,12 @@
 package com.model2.mvc.common;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
-
-import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils.Collections;
-
 /*
  * FileName : Search.java
  *   ㅇ Dynamic SQL 구성시  <foreach> elements 를 이용 반복적 구문생성시 전달되는 
  *       Collection List , Array 갖는 ValueObeject  
   */
-public class Search {
+public class Search{
 	///Field
 	private String userId;
 	private int currentPage;

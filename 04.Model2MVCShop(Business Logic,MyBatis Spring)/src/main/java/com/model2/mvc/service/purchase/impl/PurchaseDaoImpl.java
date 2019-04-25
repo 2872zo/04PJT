@@ -13,7 +13,7 @@ import com.model2.mvc.service.domain.Purchase;
 import com.model2.mvc.service.purchase.PurchaseDao;
 
 @Repository("purchaseDaoImpl")
-public class PurchaseDaoImpl implements PurchaseDao {
+public class PurchaseDaoImpl implements PurchaseDao{
 	@Autowired
 	@Qualifier("sqlSessionTemplate")
 	private SqlSession sqlSession;
